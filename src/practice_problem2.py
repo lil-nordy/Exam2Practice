@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Nate Nordquist.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -30,7 +30,7 @@ import simple_testing as st
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_practice_problem2a()
+    # run_test_practice_problem2a()
     run_test_practice_problem2b()
 
 
@@ -56,6 +56,10 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
 
+    print('Test 1')
+    print('Expected:', [8, 16, 11, -14, 14])
+    sequence = [2, 10, 5, -20, 8]
+    print('Actual:', practice_problem2a(sequence, 6))
 
 def practice_problem2a(sequence, delta):
     """
@@ -76,14 +80,18 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
-
+    new_seq = []
+    for k in range(len(sequence)):
+        # new_seq += (sequence[k] + delta) # I have no damn idea why this is spitting an error
+        new_seq.append(sequence[k] + delta)
+    return new_seq
 
 def run_test_practice_problem2b():
     """ Tests the   practice_problem2b  function. """
@@ -177,7 +185,11 @@ def practice_problem2b(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
-
+    new_str = ''
+    for k in range(len(sequence)):
+        if sequence[k] != '':
+            new_str += sequence[k][0]
+    return new_str
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

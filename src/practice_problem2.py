@@ -203,6 +203,7 @@ def practice_problem2b(sequence):
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
     new_str = ''
+
     for k in range(len(sequence)):
         if sequence[k] != '':
             new_str += sequence[k][0]

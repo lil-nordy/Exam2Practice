@@ -30,7 +30,7 @@ import simple_testing as st
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    # run_test_practice_problem2a()
+    run_test_practice_problem2a()
     run_test_practice_problem2b()
 
 
@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -60,6 +60,22 @@ def run_test_practice_problem2a():
     print('Expected:', [8, 16, 11, -14, 14])
     sequence = [2, 10, 5, -20, 8]
     print('Actual:', practice_problem2a(sequence, 6))
+
+    print('Test 2')
+    print('Expected:', [7, 15, 12, -15, 13])
+    sequence = [2, 10, 5, -20, 8]
+    print('Actual:', practice_problem2a(sequence, 5))
+
+    print('Test 3')
+    print('Expected:', [6, 14, 9, -16, 12])
+    sequence = [2, 10, 5, -20, 8]
+    print('Actual:', practice_problem2a(sequence, 4))
+
+    print('Test 4')
+    print('Expected:', [2, 10, 5, -20, 8])
+    sequence = [2, 10, 5, -20, 8]
+    print('Actual:', practice_problem2a(sequence, 0))
+
 
 def practice_problem2a(sequence, delta):
     """
@@ -92,6 +108,7 @@ def practice_problem2a(sequence, delta):
         # new_seq += (sequence[k] + delta) # I have no damn idea why this is spitting an error
         new_seq.append(sequence[k] + delta)
     return new_seq
+
 
 def run_test_practice_problem2b():
     """ Tests the   practice_problem2b  function. """
@@ -178,7 +195,7 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
